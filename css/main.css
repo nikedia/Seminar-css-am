@@ -1,38 +1,41 @@
 /*setear mi css*/
 body {
-  box-sizing: border-box;
+  box-sizing: border-box; /* para que no se modifique fuera de mi caja */
   color: #303030;
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/*clases reutilizables*/
+/* clases reutilizables*/
 .text-uppercase {
   text-transform: uppercase;
 }
 
-div {
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 2px;
-  width: 33%;
-}
+/* clases específicas*/
 
-/*clases específicas*/
-a {
-  color: inherit;
+li a {
+  color: inherit; /*hereda color del body */
   text-decoration: none;
 }
 
-ul li {
-  display: inline;
-  margin: 5px;
-  list-style: none;
+li:hover {
+  color: #db964a;
 }
 
-.logo-header {
+
+ul li {
+  list-style: none;
+  display: inline;
+  margin: 5px;
+}
+
+.logo-header { /* se crea clase para logo header*/
   width: 200px;
+}
+
+.box-header { /*que afecta la sección de header*/
+  display: inline-block;
 }
 
 header {
@@ -43,47 +46,53 @@ nav {
   position: absolute;
   right: 5%;
   top: 50%;
-  transform: translateY(-50%);
-}
-
-.box-header {
-  display: inline-block;
+  transform: translateY(-50%);  /*para centrar en relacion al logo de laboratoria, a partir de su mitad, con el top 50% lo mandamos en la segunda mitad del nav, con el transform 50 lo subimos en relacion a Y con el signo menos*/
 }
 
 .logo-square {
   width: 100px;
 }
+/* auto es el tamaño automatico*/
 
 section {
   text-align: center;
+  margin-top: 30px;
 }
 
+div {
+  display: inline-block;
+  width: 33%;
+  padding: 2px;
+  box-sizing: border-box;
+}
 
-[class^="icon-"], [class*="icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   font-size: 40px;
   transition: 5s;
 }
 
-li:hover, [class^="icon-"]:hover, [class*="icon-"]:hover {
+
+[class^="icon-"]:hover, [class*=" icon-"]:hover{
   color: #db964a;
 }
 
+
 footer {
   background-color: #303030;
-  color: #ffffff;
-  padding: 5px;
   text-align: center;
+  padding: 5px;
+  color: #fff;
 }
 
 .btn {
   background-color: #db964a;
   border: none;
   border-radius: 5px;
-  color: #ffffff;
-  font-family: inherit;
   padding: 10px;
+  font-family: inherit;
+  color: #fff;
 }
 
 .btn:hover {
-  background-color: #644721;
+  background-color: #303030;
 }
